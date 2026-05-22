@@ -38,6 +38,16 @@ document.querySelectorAll(
   observer.observe(el);
 });
 
+// Curriculum tabs
+document.querySelectorAll('.curr-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.curr-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.curr-panel').forEach(p => p.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById('tab-' + tab.dataset.tab).classList.add('active');
+  });
+});
+
 // Add fade-in CSS dynamically (avoids a flash before JS loads)
 const style = document.createElement('style');
 style.textContent = `
