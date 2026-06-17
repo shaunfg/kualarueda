@@ -412,6 +412,24 @@ img { max-width: 100%; display: block; }
   align-items: center;
 }
 
+.about-inner + .about-inner {
+  margin-top: 72px;
+  padding-top: 72px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.about-inner--reverse {
+  grid-template-columns: 1fr 280px;
+}
+
+.about-inner--reverse .about-img-wrap {
+  order: 2;
+}
+
+.about-inner--reverse .about-text {
+  order: 1;
+}
+
 .about-img {
   width: 100%;
   border-radius: 50%;
@@ -429,6 +447,19 @@ img { max-width: 100%; display: block; }
   color: var(--text-light);
   font-size: 1.05rem;
   line-height: 1.8;
+}
+
+/* ── GROUP PHOTO ── */
+.group-photo-wrap {
+  width: 100%;
+  overflow: hidden;
+}
+
+.group-photo {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  max-height: 520px;
 }
 
 /* ── CONNECT ── */
@@ -550,6 +581,10 @@ img { max-width: 100%; display: block; }
   .about-inner {
     grid-template-columns: 1fr;
     gap: 32px;
+  }
+  .about-inner--reverse .about-img-wrap,
+  .about-inner--reverse .about-text {
+    order: unset;
   }
   .about-img { max-width: 240px; margin: 0 auto; }
 }
