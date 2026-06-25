@@ -449,6 +449,18 @@ img { max-width: 100%; display: block; }
   line-height: 1.8;
 }
 
+/* ── ANNOUNCEMENT BANNER ── */
+.announce-banner {
+  display: block;
+  text-align: center;
+  background: var(--teal);
+  color: var(--green-dark);
+  font-size: 0.9rem;
+  padding: 10px 16px;
+}
+.announce-banner:hover { background: var(--teal-light); color: var(--green-dark); }
+.announce-banner strong { font-weight: 700; margin-right: 6px; }
+
 /* ── GROUP PHOTO ── */
 .group-photo-wrap {
   width: 100%;
