@@ -345,19 +345,59 @@ img { max-width: 100%; display: block; }
   border-radius: var(--radius);
   padding: 32px 36px;
 }
-.level-guide h3 {
+.level-guide-title {
   font-family: 'Lexend', sans-serif;
   font-size: 1.2rem;
   color: var(--white);
   margin-bottom: 16px;
 }
-.level-guide p {
+.level-guide strong { color: var(--white); }
+
+.lg-toggle { position: absolute; opacity: 0; width: 0; height: 0; pointer-events: none; }
+
+.level-guide-fade {
+  position: relative;
+  max-height: 150px;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+.level-guide-fade p {
   color: var(--text-light);
   font-size: 0.95rem;
   line-height: 1.7;
 }
-.level-guide p + p { margin-top: 14px; }
-.level-guide strong { color: var(--white); }
+.level-guide-fade p + p { margin-top: 14px; }
+.level-guide-fade::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 90px;
+  background: linear-gradient(rgba(34,26,18,0), var(--card-bg));
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+.lg-toggle:checked ~ .level-guide-fade { max-height: 1200px; }
+.lg-toggle:checked ~ .level-guide-fade::after { opacity: 0; }
+
+.lg-label {
+  display: block;
+  position: relative;
+  z-index: 1;
+  margin-top: -6px;
+  padding-top: 12px;
+  cursor: pointer;
+  color: var(--teal);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-align: center;
+}
+.lg-label:hover { color: var(--teal-light); }
+.lg-toggle:checked ~ .lg-label { margin-top: 14px; }
+.lg-less { display: none; }
+.lg-toggle:checked ~ .lg-label .lg-more { display: none; }
+.lg-toggle:checked ~ .lg-label .lg-less { display: inline; }
 
 /* ── LOCATION ── */
 .location {
