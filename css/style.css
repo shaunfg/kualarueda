@@ -569,6 +569,7 @@ img { max-width: 100%; display: block; }
 }
 .ig-icon { background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: white; }
 .wa-icon { background: #25D366; color: white; }
+.reg-icon { background: var(--teal); color: var(--green-dark); }
 
 .connect-card h3 {
   font-family: 'Lexend', sans-serif;
