@@ -315,7 +315,12 @@ img { max-width: 100%; display: block; }
 }
 
 /* ── CURRICULUM ── */
-.curriculum { padding: 96px 0; }
+.curriculum {
+  background: var(--green-mid);
+  padding: 96px 0;
+  border-top: 1px solid rgba(212,132,90,0.1);
+  border-bottom: 1px solid rgba(212,132,90,0.1);
+}
 
 .curr-image-wrap {
   background: var(--white);
@@ -401,10 +406,7 @@ img { max-width: 100%; display: block; }
 
 /* ── LOCATION ── */
 .location {
-  background: var(--green-mid);
   padding: 96px 0;
-  border-top: 1px solid rgba(212,132,90,0.1);
-  border-bottom: 1px solid rgba(212,132,90,0.1);
 }
 
 .venue-grid {
