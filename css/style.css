@@ -525,6 +525,55 @@ img { max-width: 100%; display: block; }
 .announce-banner:hover { background: var(--teal-light); color: var(--green-dark); }
 .announce-banner strong { font-weight: 700; margin-right: 6px; }
 
+/* ── MEDIA ── */
+.media {
+  background: var(--green-mid);
+  padding: 96px 0;
+  border-top: 1px solid rgba(212,132,90,0.1);
+  border-bottom: 1px solid rgba(212,132,90,0.1);
+  text-align: center;
+}
+.media-toggle {
+  margin-top: 28px;
+}
+.media-toggle summary {
+  display: inline-block;
+  padding: 13px 28px;
+  border-radius: 50px;
+  background: var(--teal);
+  color: var(--green-dark);
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  list-style: none;
+  transition: background var(--transition);
+}
+.media-toggle summary::-webkit-details-marker { display: none; }
+.media-toggle summary:hover { background: var(--teal-light); }
+.media-toggle[open] .media-more { display: none; }
+.media-less { display: none; }
+.media-toggle[open] .media-less { display: inline; }
+
+.media-links {
+  list-style: none;
+  margin: 24px auto 0;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.media-links a {
+  display: block;
+  background: var(--card-bg);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: var(--radius-sm);
+  padding: 14px 20px;
+  color: var(--cream);
+  font-size: 0.95rem;
+  transition: border-color var(--transition), color var(--transition);
+}
+.media-links a:hover { border-color: var(--teal); color: var(--white); }
+
 /* ── GROUP PHOTO ── */
 .group-photo-wrap {
   width: 100%;
